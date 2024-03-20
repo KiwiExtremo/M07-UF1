@@ -20,7 +20,7 @@
       <Text layoutX="233.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lletres fallades:" />
       <Text fx:id="lletresFallades" layoutX="233.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A, B, C" textAlignment="JUSTIFY" wrappingWidth="134.7294921875" />
       <Text layoutX="233.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lletra:" />
-      <TextField fx:id="lletraJugar" layoutX="283.0" layoutY="196.0" onAction="#perdreVides" prefHeight="24.0" prefWidth="31.0" />
+      <TextField fx:id="lletraJugar" layoutX="283.0" layoutY="196.0" onAction="#bEndevinarLletra" prefHeight="24.0" prefWidth="31.0" />
       <Button fx:id="bPartidaNova" layoutX="311.0" layoutY="240.0" mnemonicParsing="false" onAction="#bComencarPartidaAction" text="Boto partida" textAlignment="RIGHT" />
    </children>
 </AnchorPane>

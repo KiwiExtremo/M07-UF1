@@ -1,5 +1,7 @@
 package application;
 
+import java.io.ObjectInputFilter.Config;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Spinner;
@@ -18,9 +20,9 @@ public class ConfigurarController {
 
 	@FXML
 	private void initialize() {
-		videsSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(6, 12, 12)); // min, max, default values
-		repeticionsCheckBox.setSelected(true);
-		lletresCheckBox.setSelected(false);
+		videsSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(6, 12, Configuracio.getVides())); // min, max, default values
+		repeticionsCheckBox.setSelected(Configuracio.isComptarRepetits());
+		lletresCheckBox.setSelected(Configuracio.isMostrarErrors());
 		
 		videsSpinner.valueProperty().addListener(change -> {
 			guardarConfiguracio();

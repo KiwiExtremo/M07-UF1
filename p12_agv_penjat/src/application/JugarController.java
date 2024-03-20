@@ -1,9 +1,8 @@
 package application;
 
+import java.util.ArrayList;
 import java.util.Random;
 
-import javafx.beans.value.ChangeListener;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -30,8 +29,9 @@ public class JugarController {
 	
 	private boolean comptarRepetits = false;
 	
-	private String[] lletresJugades, paraulesPossibles = {"CAÇAFORTUNES", "BARREJAR", "DEPARTAMENT", "FALGUERA", "PASTANAGA", "PUBERTAT"};
+	private String[] paraulesPossibles = {"CAÇAFORTUNES", "BARREJAR", "DEPARTAMENT", "FALGUERA", "PASTANAGA", "PUBERTAT"};
     
+	private ArrayList<String> llistaLletresJugades, llistaLletresFallades;
 	private String paraulaOculta, paraulaEnJoc;
 	
 	/**
@@ -56,10 +56,13 @@ public class JugarController {
 		paraulaEndevinar.setText("");
 		bPartidaNova.setText("Iniciar partida");
 		lletresFallades.setText("");
-		
+
 		actualitzarVides();
 		
 		lletraJugar.setDisable(true);
+		
+		llistaLletresFallades = new ArrayList<String>();
+		llistaLletresJugades = new ArrayList<String>();
 	}
 	
 	private void actualitzarVides() {
@@ -87,10 +90,6 @@ public class JugarController {
 		lletresFallades.setVisible(Configuracio.isMostrarErrors());
 		comptarRepetits = Configuracio.isComptarRepetits();
 		
-		lletraJugar.setOnAction(event -> {
-			bEndevinarLletra();
-		});
-		
 		paraulaAleatoria();
 		
 		bPartidaNova.setText("Reiniciar partida");
@@ -112,7 +111,7 @@ public class JugarController {
 			return;
 			
 		} else if (!comptarRepetits) {
-			for (String lletraJugada : lletresJugades) {
+			for (String lletraJugada : llistaLletresJugades) {
 				if (lletra.equals(lletraJugada)) {
 					return;
 				}
@@ -123,15 +122,22 @@ public class JugarController {
 	}
 	
 	private String canviarLletra(String lletra) {
+		char lletraCanviar = lletra.charAt(0);
+		char caracterActual;
+		
 		StringBuilder paraulaActualitzada = new StringBuilder();
 		
 		for (int i = 0; i < paraulaEnJoc.length(); i++) {
-			if (paraulaEnJoc.charAt(i) == lletra.charAt(0)) {
-				paraulaActualitzada.append(lletra);
+			caracterActual = paraulaEnJoc.charAt(i);
+			
+			if (caracterActual == lletraCanviar) {
+				paraulaActualitzada.append(lletraCanviar);
+				
 			} else {
-				paraulaActualitzada.append(String.valueOf(paraulaEnJoc.charAt(i)));
+				paraulaActualitzada.append(caracterActual);
 			}
 		}
+		
 		paraulaEnJoc = paraulaActualitzada.toString();
 		
 		return paraulaActualitzada.toString();
