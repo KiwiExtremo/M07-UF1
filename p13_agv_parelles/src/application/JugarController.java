@@ -125,17 +125,14 @@ public class JugarController {
 			if (image.equals(backside)) {
 				flipCard(col, row, true);
 
-				// imageGrid.getChildren().remove(currentContent);
 			} else {
 				flipCard(col, row, false);
-
-				// imageGrid.getChildren().remove(currentContent);
 			}
 		}
 	}
 
 	private void flipCard(int col, int row, boolean isBackside) {
-		int arrayPosition = row * 4 + col;
+		int arrayPosition = (row * imageGrid.getColumnCount()) + col;
 
 		if (isBackside) {
 			ImageView flippedImage = imagePairs.get(arrayPosition);
@@ -146,6 +143,9 @@ public class JugarController {
 			backImage.setFitHeight(65);
 			backImage.setFitWidth(100);
 			backImage.setImage(backside);
+			backImage.setOnMouseClicked(event -> {
+				checkCard(event);
+			});
 
 			imageGrid.add(backImage, col, row);
 		}

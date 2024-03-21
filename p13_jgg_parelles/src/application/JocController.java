@@ -63,21 +63,31 @@ public class JocController {
 				cont = 0;
 				reiniciarImatges();
 			}
+
 			Node src = (Node) evt.getSource();
 			Integer f = GridPane.getRowIndex(src);
 			Integer c = GridPane.getColumnIndex(src);
+
 			int fila = f == null ? 0 : f;
 			int columna = c == null ? 0 : c;
+
 			int pos = fila * NUMERO_COLUMNES + columna;
+
 			if (src instanceof ImageView img) {
+
 				if (pos < nombreParelles * 2) {
+
 					img.setImage(images[pos]);
+
 					if (cont == 0) {
+
 						tempImage = img.getImage();
 						tempCoords[0] = fila;
 						tempCoords[1] = columna;
 					}
+
 					if (cont == 1) {
+
 						if (tempImage.equals(img.getImage()) && (tempCoords[0] != fila || tempCoords[1] != columna))
 							acertades.add(tempImage);
 					}
@@ -91,23 +101,35 @@ public class JocController {
 			 * if(cont==1) { if (tempImage.equals(img.getImage()) && (tempCoords[0]!=fila ||
 			 * tempCoords[1]!=columna)) acertades.add(tempImage); } } } } }
 			 */
-			if (images.length == acertades.size() * 2)
+			if (images.length == acertades.size() * 2) {
 				finish = true;
-			if (pos < nombreParelles * 2)
+			}
+
+			if (pos < nombreParelles * 2) {
 				cont++;
-			if (!finish && pos < nombreParelles * 2)
+			}
+
+			if (!finish && pos < nombreParelles * 2) {
 				punts--;
-			if (punts == 0)
+			}
+
+			if (punts == 0) {
 				finish = true;
+			}
+
 			txtPunts.setText(String.valueOf(punts));
+
 			if (finish) {
 				Alert alert = new Alert(AlertType.NONE);
 				alert.setTitle("El joc ha finalitzat!");
 				String content = "";
-				if (images.length == acertades.size() * 2)
+
+				if (images.length == acertades.size() * 2) {
 					content = "Has Guanyat!";
-				else if (punts == 0 && images.length != acertades.size() * 2)
+				} else if (punts == 0 && images.length != acertades.size() * 2) {
 					content = "Has Perdut!";
+				}
+
 				alert.setContentText(content);
 				alert.getDialogPane().getButtonTypes().add(ButtonType.OK);
 				alert.showAndWait();
