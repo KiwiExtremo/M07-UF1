@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?scenebuilder-stylesheet vista.css?>
 
-<AnchorPane fx:id="jugar" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.JugarController">
+<AnchorPane fx:id="jugar" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.JugarController">
    <children>
       <GridPane fx:id="imageGrid" layoutX="22.0" layoutY="43.0" prefHeight="215.0" prefWidth="430.0">
         <columnConstraints>
@@ -24,20 +24,6 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
-         <children>
-            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
-            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
-            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
-            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
-            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" />
-            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#flipCard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-         </children>
       </GridPane>
       <ImageView fx:id="restart" fitHeight="112.0" fitWidth="106.0" layoutX="475.0" layoutY="169.0" onMouseClicked="#restartGame" pickOnBounds="true" preserveRatio="true">
          <image>

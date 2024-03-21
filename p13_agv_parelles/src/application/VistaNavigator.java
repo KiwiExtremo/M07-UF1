@@ -17,8 +17,8 @@ public class VistaNavigator {
      * Convenience constants for fxml layouts managed by the navigator.
      */
     public static final String MAIN    = "main.fxml";
-    public static final String VISTA_1 = "jugar.fxml";
-    public static final String VISTA_2 = "configurar.fxml";
+    public static final String JUGAR = "jugar.fxml";
+    public static final String CONFIGURAR = "configurar.fxml";
     public static final String QUANT_A = "quantA.fxml";
 
     /** The main application layout controller. */

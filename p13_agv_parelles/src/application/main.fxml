@@ -21,8 +21,8 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Editar">
             <items>
-              <MenuItem fx:id="vista1MenuItem" mnemonicParsing="false" text="Vista 1" onAction="#vista1Action" />
-              <MenuItem fx:id="vista2MenuItem" mnemonicParsing="false" text="Vista 2" onAction="#vista2Action" />
+              <MenuItem fx:id="jugarMenuItem" mnemonicParsing="false" text="Jugar" onAction="#jugarAction" />
+              <MenuItem fx:id="configurarMenuItem" mnemonicParsing="false" text="Configurar" onAction="#configurarAction" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Ajuda">

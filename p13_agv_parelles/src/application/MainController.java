@@ -45,13 +45,13 @@ public class MainController {
     }
 
     @FXML
-    private void vista1Action() {
-        VistaNavigator.loadVista(VistaNavigator.VISTA_1);
+    private void jugarAction() {
+        VistaNavigator.loadVista(VistaNavigator.JUGAR);
     }
 
     @FXML
-    private void vista2Action() {
-        VistaNavigator.loadVista(VistaNavigator.VISTA_2);
+    private void configurarAction() {
+        VistaNavigator.loadVista(VistaNavigator.CONFIGURAR);
     }
 
     @FXML
