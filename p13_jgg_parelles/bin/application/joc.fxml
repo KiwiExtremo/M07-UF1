@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+<?scenebuilder-stylesheet vista.css?>
+
+<AnchorPane fx:id="joc" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.JocController">
+   <children>
+      <GridPane fx:id="gpTauler" layoutX="22.0" layoutY="18.0" prefHeight="253.0" prefWidth="470.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="85.0" minHeight="85.0" prefHeight="85.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#girarImatge" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/img03.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#girarImatge" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+               <image>
+                  <Image url="@resources/img_off.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#girarImatge" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+               <image>
+                  <Image url="@resources/img03.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#girarImatge" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+               <image>
+                  <Image url="@resources/img_off.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#girarImatge" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@resources/img_off.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#girarImatge" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@resources/img_off.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#girarImatge" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@resources/img06.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#girarImatge" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@resources/img_off.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#girarImatge" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@resources/img_off.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#girarImatge" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@resources/img_off.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#girarImatge" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@resources/img_off.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#girarImatge" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@resources/img_off.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <Text layoutX="521.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Punts" />
+      <TextField fx:id="txtPunts" layoutX="511.0" layoutY="64.0" prefHeight="24.0" prefWidth="56.0" />
+      <ImageView fitHeight="65.0" fitWidth="100.0" layoutX="507.0" layoutY="194.0" onMouseClicked="#reiniciar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@resources/img_new.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
